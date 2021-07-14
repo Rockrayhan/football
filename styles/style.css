@@ -1,0 +1,246 @@
+/* common styles or utilities */
+
+body { font-family: 'Poppins', sans-serif;
+        margin: 0;
+        background-color: #FFFFFF;
+        
+        
+}
+
+h1   {  color : white;
+        font-weight: 700;
+        font-size: 64px;
+}
+
+p {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        color: #6C6C6C;
+}
+
+
+/* --------------- top banner part ---------- */
+
+.top-banner {  
+    height: 720px;
+    background-color: #2D25A0;
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    grid-column-gap: 102px;
+    
+ }
+
+ .top-banner .banner-photo img {
+        width: 100%;
+}
+
+.banner-headline {
+        width: 485px;
+        height: 230px;
+        margin-left: 156px;
+        margin-bottom: 240px;
+        margin-top: 100px;
+}
+.link-button {          
+        text-decoration: none;
+        background-color: #E02C6D ;
+        padding: 15px 25px;
+        font-weight: 500 ;
+        color: white; 
+ }
+
+ .right-arrow { 
+         margin-left: 10px;
+  }
+
+.banner-photo { 
+        width: 600px;
+        height: 500px;  
+        margin-right: 140px;
+        margin-top: 135px;
+        margin-bottom: 86px;
+        transition: width 1s, height 1s, transform 2s  ;
+}
+
+/* ------- transition ---- */
+
+.banner-photo:hover{  
+        width: 650px;
+        height: 500px;
+        transform: rotate(15deg)    
+ }
+/* ---------------------  */
+
+ 
+
+  /*----------- Mid section / players part----------- */
+
+  .container { 
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 27px;
+        grid-row-gap: 30px;
+        margin-left: 180px;
+        margin-right: 210px;
+        margin-top: 70px;
+        
+}
+
+  .player-card  { 
+        width: 330px;
+        height: 474px;
+        padding: 15px;
+        padding-right: 0;
+        background-color: #FFFFFF;
+        box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+        
+
+}
+
+
+.player-photo img , .player-info { 
+        width: 300px;
+        height: 256px;
+}
+
+.player-heading {
+        font-weight: bold;
+        font-size: 28px;
+}
+  
+
+/* ------------ extra items part ------------- */
+
+
+.final-team { display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-left: 200px;              
+}
+
+
+.news-heading {
+        margin-top: 150px;
+        text-align: center;
+}
+
+.news-heading-h1 {
+        color: rgb(51, 48, 48);
+        font-weight: bolder;
+}
+
+.news-heading-h2 {
+        color:#6C6C6C ;
+        font-size: 35px;
+}
+
+.argentina , .brazil {  
+        width: 450px;
+}
+
+.brazil { margin-top: -20px  
+
+}
+
+.argentina img { 
+        height: 300px; 
+        width: 430px;
+ }
+
+ .brazil img {
+        height: 350px; 
+        width: 450px;
+ }
+
+#goal-text-argentina {
+         font-size: 150px; 
+         margin-top: 0;
+         margin-left: 100px;
+         color: rgb(82, 79, 79); 
+         margin-bottom: 10px;      
+        
+        
+}
+
+#goal-text-brazil {
+        font-size: 150px; 
+        color: rgb(82, 79, 79);  
+        margin-top: -20px;
+        margin-left: 100px;
+        margin-bottom: 10px;  
+
+}
+
+
+.final-team .news-info {  margin-top: 10px; }
+
+.brazil .news-info { margin-top: -12px; }
+
+.highlight-button  { 
+        background-color: #E02C6D ;
+        height: 60px;
+        width: 280px;
+        font-weight: 700 ;
+        font-size: 18px;
+        margin-left:600px ;
+        margin-top: 40px;
+        padding: 10px;
+ }
+.highlight-button a { 
+        text-decoration: none; 
+        color: white;
+}
+
+ /* ------------- Footer part ------------- */
+
+ footer { 
+        width: 500px;
+        height: 213px;
+        margin : 130px 400px 10px 500px ; 
+        display: flex ;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+
+}
+
+
+ footer img { 
+         width: 70%;
+  }
+
+  .footer-icons { 
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 8px;
+ }
+
+.footer-copyright { margin-top: 15px; }
+ 
+
+/* ------------- Media quary for mobile devices ---------------- */
+
+
+@media only screen and (max-width:688px)  {
+        .body {
+            width:100% ;
+         }
+
+         .player-card ,.argentina, .brazil , footer , .highlight-button { 
+                 justify-content: center;
+         }
+
+         .container ,  .top-banner , .final-team , .footer{
+                 grid-template-columns: repeat(1, 1fr );
+         } 
+
+         .player-card , .top-banner, .argentina, .brazil , footer {  flex-direction: column;
+
+         }
+
+         .highlight-button , footer , 
+         .news-heading {
+                 position: relative;
+                 left: -320px;
+         }
